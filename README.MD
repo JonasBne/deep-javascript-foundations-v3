@@ -9,3 +9,4 @@ The notes and examples are extended with my own comments and examples.
 ### Resources
 - https://www.javascripttutorial.net/javascript-primitive-vs-reference-values/
 - https://developer.mozilla.org/en-US/docs/Glossary/Primitive
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
