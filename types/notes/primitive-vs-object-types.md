@@ -1,5 +1,33 @@
 # Primitive vs. object types
 
+## How are primitive and object types stored in memory?
+
+There are two types of memory locations available: the `stack` and the `heap`.
+
+`Static data` is data whose size is fixed at compile time. It includes:
+- The primitive types
+- Reference values that refer to objects
+
+Since static data has a fixed size, it's stored onto the `stack`. This means the JavaScript engine allocates a fixed amount of memory.
+
+In case of objects the reference value is also stored on the `stack`, but the object itself is stored on the `heap`. The `heap` is a large pool of memory that can be used dynamically. This means the JavaScript engine can allocate more memory if needed, since the amount of memory needed for an object is not fixed and can change over time.
+
+let's use the following example:
+
+```js
+let name="John"
+let age=25
+
+let person = {
+    name: "John",
+    age: 25
+}
+```
+
+This results in the following allocation:
+
+![Alt text](image.png)
+
 ## How do primitive types and object types differ?
 
 Let's take a look at a primitive type:
