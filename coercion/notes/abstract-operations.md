@@ -99,4 +99,5 @@ So for example:
 
 ```js
 [] // will output truthy because [] is not part of the falsy list
+{} // will output truthy because {} is not part of the falsy list
 ```
