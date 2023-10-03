@@ -1,4 +1,4 @@
-# Primitive types
+# Primitive types (value types)
 
 # What are the primitive types?
 
@@ -10,6 +10,37 @@ The list of primitive types in JavaScript
 - symbol
 - bigint
 - null
+
+A `primitive type` can be defined as: not an object and has no methods or properties. It is `immutable` and cannot be altered. It can also be referred to as `value type`.
+
+# Auto-boxing in JavaScript
+
+A primitive type has no methods, but they behave as if they do.
+
+For example:
+
+```js
+const myString = 'hello world'
+myString.includes('hello') // how can this work if a string is no object and doesn't have the property includes?
+```
+
+When properties are accessed on primitive types, JavaScript `auto-boxes` the value into a wrapper object and accesses the property on that object instead.
+
+So what really happens is:
+
+```js
+// a new String object is created
+new String(myString).prototype.includes('hello')
+```
+
+Therefore the following will not work:
+
+```js
+const myString = 'hello world'
+myString.foo = 'bar'
+```
+
+Because `myString.foo = 'bar'` will not assign the propery `foo` to `myString`, but it will assign it to the wrapper object that was created by `new String(myString)`.
 
 # The `typeof` operator
 
